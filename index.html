@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <link rel="stylesheet" href="css/output.css">
-    <title></title>
+    <title>Menu Toggle</title>
 </head>
 
 <body>
@@ -28,13 +26,14 @@
 
             <div class="hidden md:flex items-center space-x-4">
                 <h3 class="font-semibold text-white text-sm">CPA 65 3056-5000</h3>
-                <div class=" border-l-4 border-limeGreen h-10"></div>
+                <div class="border-l-4 border-limeGreen h-10"></div>
                 <h3 class="font-semibold text-white text-sm">Matriz 65 3314-1000</h3>
             </div>
         </div>
-        <nav class="bg-limeGreen p-2">
+        <nav class="bg-limeGreen p-2 relative">
             <ul class="flex items-center space-x-4">
-                <i class="fa-solid fa-bars text-white flex items-center ml-4 text-3xl cursor-pointer"></i>
+                <i class="fa-solid fa-bars text-white flex items-center ml-4 text-3xl cursor-pointer"
+                    id="menu-toggle"></i>
                 <div class="flex-1 flex justify-center">
                     <li><a href="#" class="text-strongGreen hover:underline font-bold mr-3">Lojas</a></li>
                     <li><a href="#" class="text-strongGreen hover:underline font-bold mr-3">Produtos</a></li>
@@ -44,6 +43,47 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Menu Toggle -->
+    <div id="menu"
+    class="fixed top-0 left-0 w-full h-full bg-limeGreen flex flex-col items-center justify-center z-50 hidden">
+    <button class="absolute top-4 right-4 text-white text-3xl focus:outline-none" id="close-menu">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="text-white text-center space-y-6 px-6">
+        <h3 class="text-3xl font-bold">Contatos</h3>
+        <div class="space-y-4">
+            <div class="flex flex-col items-center">
+                <h4 class="text-lg font-semibold">CPA</h4>
+                <p class="text-md">65 3056-5000</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <h4 class="text-lg font-semibold">Matriz</h4>
+                <p class="text-md">65 3314-1000</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <h4 class="text-lg font-semibold">Carmindo</h4>
+                <p class="text-md">65 3027-9700</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            menu.classList.add('hidden');
+        });
+    </script>
 </body>
 
 </html>
