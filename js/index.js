@@ -3,14 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeMenuButton = document.getElementById("close-menu");
   const menuToggle = document.getElementById("menu-toggle");
 
-  menuToggle.addEventListener("click", () => {
-    menu.classList.remove("translate-x-full");
-    menu.classList.remove("hidden");
-  });
+  menuToggle.addEventListener("click", () => menu.classList.remove("hidden"));
 
-  closeMenuButton.addEventListener("click", () => {
-    setTimeout(() => {
-      menu.classList.add("hidden");
-    }, 300);
-  });
+  closeMenuButton.addEventListener("click", () => menu.classList.add("hidden"));
 });
