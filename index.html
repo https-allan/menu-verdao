@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="css/output.css">
     <title></title>
 </head>
@@ -11,28 +16,31 @@
 <body>
     <header>
         <div class="flex justify-between items-center bg-strongGreen p-4">
-            <div class="flex items-center space-x-4">
+            <div class="hidden md:flex items-center space-x-4">
                 <h3 class="font-semibold text-white text-sm">Matriz 65 3314-1000</h3>
                 <div class="border-l-4 border-limeGreen h-10"></div>
                 <h3 class="font-semibold text-white text-sm">Carmindo 65 3027-9700</h3>
             </div>
 
-            <div class="flex justify-center items-center">
+            <div class="flex-1 flex justify-center">
                 <img src="assets/img/logo_verdao_Prancheta 1.webp" alt="logo verdão" loading="lazy" class="h-12 w-auto">
             </div>
 
-            <div class="flex items-center space-x-4">
+            <div class="hidden md:flex items-center space-x-4">
                 <h3 class="font-semibold text-white text-sm">CPA 65 3056-5000</h3>
                 <div class=" border-l-4 border-limeGreen h-10"></div>
                 <h3 class="font-semibold text-white text-sm">Matriz 65 3314-1000</h3>
             </div>
         </div>
         <nav class="bg-limeGreen p-2">
-            <ul class="flex justify-center space-x-4">
-                <li><a href="#" class="text-strongGreen hover:underline font-bold">Lojas</a></li>
-                <li><a href="#" class="text-strongGreen hover:underline font-bold">Produtos</a></li>
-                <li><a href="#" class="text-strongGreen hover:underline font-bold">Blog</a></li>
-                <li><a href="#" class="text-strongGreen hover:underline font-bold">Sobre</a></li>
+            <ul class="flex items-center space-x-4">
+                <i class="fa-solid fa-bars text-white flex items-center ml-4 text-3xl cursor-pointer"></i>
+                <div class="flex-1 flex justify-center">
+                    <li><a href="#" class="text-strongGreen hover:underline font-bold mr-3">Lojas</a></li>
+                    <li><a href="#" class="text-strongGreen hover:underline font-bold mr-3">Produtos</a></li>
+                    <li><a href="#" class="text-strongGreen hover:underline font-bold mr-3">Blog</a></li>
+                    <li><a href="#" class="text-strongGreen hover:underline font-bold">Sobre</a></li>
+                </div>
             </ul>
         </nav>
     </header>
